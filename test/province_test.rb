@@ -41,12 +41,29 @@ class ProvinceTest < Minitest::Test
     assert_equal(-25, @asia.shortfall)
     assert_equal(0, @asia.profit)
   end
-  
+
   def test_negative_demand
     @asia.demand = -1
     assert_equal(-26, @asia.shortfall)
     assert_equal(-10, @asia.profit)
   end
+
+  # def test_empty_string_demand
+  #   @asia.demand = -1
+  #   assert_equal(-26, @asia.shortfall)
+  #   assert_equal(-10, @asia.profit)
+  # end
+
+  # def test_string_producers
+  #   data = {
+  #     name: 'String producers',
+  #     producers: "",
+  #     demand: 30,
+  #     price: 20
+  #   }
+  #   producers = Province.new(data)
+  #   assert_equal(0, nullProducers.shortfall)
+  # end
 
 end
 
